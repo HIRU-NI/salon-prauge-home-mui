@@ -16,9 +16,13 @@ const themeObject = {
     button: {
       primary: "#000",
       secondary: "#B99A5F",
+      textTransform: "none",
     },
     typography: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "Poppins",
+      button: {
+        textTransform: "none",
+      },
     },
     components: {
       MuiCssBaseline: {

@@ -16,7 +16,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <Container sx={{pt:10}}>
+      <Container >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
