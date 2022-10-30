@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { ThemeProvider, createTheme, Container } from "@mui/material";
 
-import Services from "./pages/services";
+import Services from "./pages/service";
 import Home from "./pages/home";
 
 import themeObject from "./assets/styles/theme";
