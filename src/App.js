@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 
 import { Routes, Route } from "react-router-dom";
 
-import { ThemeProvider, createTheme, Container } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material";
 
 import Services from "./pages/service";
 import Home from "./pages/home";
@@ -16,12 +16,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <Container >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
-      </Container>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
     </ThemeProvider>
   );
 }

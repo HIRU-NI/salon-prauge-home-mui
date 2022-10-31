@@ -1,0 +1,38 @@
+.hero_main {
+  width: 100vw;
+  height: 500px;
+}
+
+.hero_background {
+  background-image: url("../images/heroImage.png"),
+    url("../images/heroImage-background-blend.png");
+  height: 100%;
+  background-blend-mode: darken;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+}
+
+.hero_text {
+  font-family: "Playfair Display" !important;
+  color: #fff;
+  width: 30%;
+  line-height: 99%;
+  letter-spacing: -0.03em;
+}
+
+.hero_title {
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.hero_subtitle {
+  font-size: 14px !important;
+  margin-bottom: 10px !important;
+}
+
+.MuiButtonBase-root {
+  border: 1px solid #fff !important;
+  color: #fff !important;
+  text-transform: none !important;
+}
