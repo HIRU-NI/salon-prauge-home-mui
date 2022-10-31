@@ -6,7 +6,7 @@ const navItems = ["Home", "About", "Services", "Shop"];
 const Navbar = () => {
   return (
     <>
-      <AppBar sx={{ bgcolor: "background.paper" }} position="static">
+      <AppBar sx={{ bgcolor: "background.paper", boxShadow:'none' }} position="static">
         <Toolbar>
           <img src={require("../assets/images/logo.png")} alt="logo" />
           <Typography
@@ -24,7 +24,7 @@ const Navbar = () => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#000", textTransform: 'capitalize' }}>
+              <Button key={item} sx={{ color: "#000", textTransform: 'capitalize', mx:3 }}>
                 {item}
               </Button>
             ))}

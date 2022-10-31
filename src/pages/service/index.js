@@ -9,7 +9,7 @@ const image = require("../../assets/images/services/haircut.png");
 
 const Services = () => {
   return (
-    <div>
+    <div class="service_main">
       <Grid container spacing={2}>
         <Grid
           item
