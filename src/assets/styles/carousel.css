@@ -1,0 +1,15 @@
+.carousel_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100vw;
+}
+
+.carousel_title {
+    font-weight: 600 !important;
+}
+
+.carousel {
+    width: 100%;
+}

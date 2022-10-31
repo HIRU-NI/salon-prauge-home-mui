@@ -3,6 +3,7 @@ import React from "react";
 
 import "../assets/styles/hero.css";
 
+
 const Hero = () => {
   return (
     <div class="hero_main">

@@ -1,4 +1,9 @@
 import "./App.css";
+
+
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
 import Navbar from "./components/Navbar";
 
 import { Routes, Route } from "react-router-dom";
@@ -9,6 +14,7 @@ import Services from "./pages/service";
 import Home from "./pages/home";
 
 import themeObject from "./assets/styles/theme";
+
 
 const theme = createTheme(themeObject);
 
