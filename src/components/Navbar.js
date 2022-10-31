@@ -1,12 +1,40 @@
 import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
 import React from "react";
 
-const navItems = ["Home", "About", "Services", "Shop"];
+import { useNavigate } from "react-router-dom";
+
+const navItems = [
+  {
+    index: 1,
+    name: "Home",
+    path: "/",
+  },
+  {
+    index: 1,
+    name: "About",
+    path: "/",
+  },
+  {
+    index: 1,
+    name: "Services",
+    path: "/services",
+  },
+  {
+    index: 1,
+    name: "Shop",
+    path: "/",
+  },
+];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <>
-      <AppBar sx={{ bgcolor: "background.paper", boxShadow:'none' }} position="static">
+      <AppBar
+        sx={{ bgcolor: "background.paper", boxShadow: "none" }}
+        position="static"
+      >
         <Toolbar>
           <img src={require("../assets/images/logo.png")} alt="logo" />
           <Typography
@@ -24,11 +52,22 @@ const Navbar = () => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#000", textTransform: 'capitalize', mx:3 }}>
-                {item}
+              <Button
+                key={`${item.name} ${item.index}`}
+                sx={{ color: "#000", textTransform: "capitalize", mx: 3 }}
+                onClick={() => navigate(item.path)}
+              >
+                {item.name}
               </Button>
             ))}
-            <Button sx={{ bgcolor: "button.primary", color: "#fff", mx: 3, textTransform: 'capitalize' }}>
+            <Button
+              sx={{
+                bgcolor: "button.primary",
+                color: "#fff",
+                mx: 3,
+                textTransform: "capitalize",
+              }}
+            >
               Book now
             </Button>
           </Box>
