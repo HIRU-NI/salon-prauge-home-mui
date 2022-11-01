@@ -10,14 +10,11 @@ const image = require("../../assets/images/services/haircut.png");
 const Services = () => {
   return (
     <div class="service_main">
-      <Grid container spacing={2}>
+      <Grid container >
         <Grid
           item
           xs={6}
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="flex-start"
+          className="service_content"
         >
           <h1>Haircut</h1>
           <p>

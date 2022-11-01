@@ -1,16 +1,14 @@
 .service_main {
-  height: 100vh;
+  height: 89.9vh !important;
+  margin: 0% 0% 0% 5%;
+  overflow: hidden;
  
 }
 
-.servicedetails_row {
-  height: 100%;
-}
 
-.servic_content {
-  justify-items: center;
-  justify-content: center;
-  text-align: left;
+.service_content {
+  padding-top: 10% !important; 
+  padding-right: 10% !important;
 }
 
 .servicedetails_content h1 {
@@ -26,8 +24,7 @@
 }
 
 .service_image img {
-  height: 100vh;
-  
+  width: 100%;
   overflow-y: hidden;
   object-fit: cover;
 }
