@@ -39,5 +39,30 @@
 }
 
 .carousel_item {
-    max-width: 80%;
+    max-width: 90%;
+    border-radius: 0 !important;
+    background-color: #FAFAFA !important;
+    box-shadow: none !important;
 }
+
+.carousel_button {
+  color: #B99A5F !important;
+  font-size: 14px !important;
+  border: 0px !important;
+  box-shadow: none !important;
+}
+
+.slick-prev{
+  display: block;
+  height: 17.5px;
+  width: 8.75px;
+  background-color: #FAFAFA !important;
+}
+
+.slick-next{
+  display: block;
+  height: 17.5px;
+  width: 8.75px;
+  background-color: #FAFAFA !important;
+}
+
