@@ -67,6 +67,7 @@ const Navbar = () => {
                 mx: 3,
                 textTransform: "capitalize",
               }}
+              onClick={() => navigate("/booking")}
             >
               Book now
             </Button>
