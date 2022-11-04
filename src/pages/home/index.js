@@ -1,15 +1,15 @@
 import React from "react";
 
-import Hero from "../../components/Hero"
-import Carousel from "../../components/Carousel"
+import Hero from "../../components/Hero";
+import Carousel from "../../components/Carousel";
 import About from "../../components/About";
 
-const Home = () => {
+const Home = ({ aboutRef, servicesRef }) => {
   return (
     <div>
       <Hero />
-      <Carousel />
-      <About />
+      <Carousel ref={servicesRef} />
+      <About ref={aboutRef} />
     </div>
   );
 };

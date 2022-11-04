@@ -1,33 +1,56 @@
 import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
-import React from "react";
+import { React, useEffect } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navItems = [
   {
     index: 1,
     name: "Home",
     path: "/",
+    id: "",
   },
   {
     index: 1,
     name: "About",
     path: "/",
+    id: "about",
   },
   {
     index: 1,
     name: "Services",
-    path: "/services",
+    path: "/",
+    id: "services",
   },
   {
     index: 1,
     name: "Shop",
     path: "/",
+    id: "services",
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ aboutRef, servicesRef }) => {
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const { targetId } = location.state || {}; //ID of the element to scroll to
+
+  useEffect(() => {
+    console.log(targetId)
+    if (targetId === "about") {
+      aboutRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+    if (targetId === "services") {
+      servicesRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [targetId, aboutRef, servicesRef]);
 
   return (
     <>
@@ -55,7 +78,11 @@ const Navbar = () => {
               <Button
                 key={`${item.name} ${item.index}`}
                 sx={{ color: "#000", textTransform: "capitalize", mx: 3 }}
-                onClick={() => navigate(item.path)}
+                onClick={() => {
+                  location.state = { targetId: item.id };
+                  console.log(location.state)
+                  navigate(item.path);
+                }}
               >
                 {item.name}
               </Button>

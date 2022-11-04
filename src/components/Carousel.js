@@ -1,4 +1,4 @@
-import React from "react";
+import {React, forwardRef} from "react";
 
 import Slider from "react-slick";
 
@@ -88,9 +88,9 @@ const items = [
   },
 ];
 
-const ServiceCarousel = () => {
+const ServiceCarousel = forwardRef((props, ref) => {
   return (
-    <div className="carousel_main">
+    <div className="carousel_main" ref={ref} id="services">
       <Typography variant="h4" className="carousel_title" >
         Services
       </Typography>
@@ -101,6 +101,6 @@ const ServiceCarousel = () => {
       </Slider>
     </div>
   );
-};
+});
 
 export default ServiceCarousel;
