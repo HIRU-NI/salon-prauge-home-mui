@@ -13,6 +13,8 @@ import {
   Typography,
 } from "@mui/material";
 
+import { useNavigate } from "react-router-dom";
+
 import { DesktopTimePicker } from "@mui/x-date-pickers/DesktopTimePicker";
 
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
@@ -51,6 +53,8 @@ const services = [
 ];
 
 const Booking = () => {
+  const navigate = useNavigate();
+
   return (
     <div class="service_main">
       <Grid container>
@@ -112,8 +116,17 @@ const Booking = () => {
                 </Grid>
               </Grid>
             </LocalizationProvider>
-            <Typography variant="h6" sx={{marginTop: "20px"}}>Total: USD 25.00</Typography>
-            <Button className="form_button">Pay Now</Button>
+            <Typography variant="h6" sx={{ marginTop: "20px" }}>
+              Total: USD 25.00
+            </Typography>
+            <Button
+              className="form_button"
+              onClick={() => {
+                navigate("/success");
+              }}
+            >
+              Pay Now
+            </Button>
           </Box>
         </Grid>
         <Grid item xs={6} className="service_image">

@@ -37,7 +37,7 @@ const Navbar = ({ aboutRef, servicesRef }) => {
   const { targetId } = location.state || {}; //ID of the element to scroll to
 
   useEffect(() => {
-    console.log(targetId)
+    console.log(targetId);
     if (targetId === "about") {
       aboutRef.current.scrollIntoView({
         behavior: "smooth",
@@ -80,7 +80,7 @@ const Navbar = ({ aboutRef, servicesRef }) => {
                 sx={{ color: "#000", textTransform: "capitalize", mx: 3 }}
                 onClick={() => {
                   location.state = { targetId: item.id };
-                  console.log(location.state)
+
                   navigate(item.path);
                 }}
               >

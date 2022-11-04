@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Services from "./pages/service";
 import Home from "./pages/home";
 import Booking from "./pages/booking";
+import Success from "./pages/success";
 
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
@@ -45,6 +46,7 @@ function App() {
           />
           <Route path="/services" element={<Services />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
       </ThemeProvider>
     </Wrapper>

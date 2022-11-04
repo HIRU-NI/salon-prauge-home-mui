@@ -8,10 +8,13 @@ import {
   Button,
 } from "@mui/material";
 
+import { useNavigate } from "react-router-dom";
+
 //custom-css
 import "../assets/styles/carousel.css";
 
 const CarouselItem = ({ service }) => {
+  const navigate = useNavigate()
   return (
     <Card key={service.name} className="carousel_item">
       <CardMedia
@@ -27,7 +30,7 @@ const CarouselItem = ({ service }) => {
         <Typography variant="body2" color="text.secondary"gutterBottom>
           {service.description}
         </Typography>
-        <Button className="carousel_button">MAKE A RESERVATION</Button>
+        <Button className="carousel_button" onClick={() => {navigate("/services")}}>MAKE A RESERVATION</Button>
       </CardContent>
     </Card>
   );
